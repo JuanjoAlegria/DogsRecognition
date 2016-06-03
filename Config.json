@@ -13,7 +13,7 @@
 	"regularizationString": "L2Reg-1",
 
 	"miniBatchSize": 100,
-	"miniBatchValidationSize": 100,
+	"miniBatchValidationSize": 500,
 	"eta": 0.1,
 	"learningScheduleString": "Adam",
 	"maxError": 0.0001,
