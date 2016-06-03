@@ -1,0 +1,25 @@
+{
+	"channelReps":
+	[
+		["Conv-20-5", "Pool-Max-2"]
+	],
+	"fullLayersRep": ["Hidden-100", "Output-10"],
+	"inputDimension": 2, 
+	"inputSizeChannels": [28, 28],
+	"nInputsExtra": 0,
+	"activationString": "Rectifier",
+	"costString": "LogLikelihood",
+	"outputActivationString":"Softmax",
+	"regularizationString": "L2Reg-1",
+
+	"miniBatchSize": 100,
+	"miniBatchValidationSize": 100,
+	"eta": 0.1,
+	"learningScheduleString": "Adam",
+	"maxError": 0.0001,
+	"epsilonError": 0.05,
+	"monitorValidationError": true,
+
+	"epochSave": 100,
+	"networkLoadDir": ""
+}
