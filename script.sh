@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=dogsRecognition
 #SBATCH --partition=slims
-#SBATCH -n 20 # Debe de ser un número múltiplo de 20
+#SBATCH -n 100 # Debe de ser un número múltiplo de 20
+#SBATCH --ntasks-per-node=20 
 #SBATCH --output=dogsRecognition_%j.out
 #SBATCH --error=dogsRecognition_%j.err
 #SBATCH --mail-user=jotaj.8a@gmail.com
