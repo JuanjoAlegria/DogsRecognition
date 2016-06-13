@@ -1,16 +1,16 @@
 {
 	"trainingType": "simple",
 	"networkType": "FeedForwardNet",
-	"feedForwardRep": ["Hidden-10", "Output-10"], 
-	"inputSize": 2,
+	"feedForwardRep": ["Hidden-30", "Output-10"], 
+	"inputSize": 784,
 	"activationString": "Sigmoid",
 	"costString": "Quadratic",
 	"outputActivationString":"Sigmoid",
 	"regularizationString": "NullReg",
 
-	"miniBatchSize": 10,
-	"eta": 0.5,
-	"learningScheduleString": "Adam",
+	"miniBatchSize": 100,
+	"eta": 9.0,
+	"learningScheduleString": "SimpleEta",
 
 	"stopCriteria": "maxEpochs",
 	"maxEpochs": 200,

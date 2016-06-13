@@ -69,17 +69,17 @@ def load_data_wrapper():
     turn out to be the most convenient for use in our neural network
     code."""
     tr_d, va_d, te_d = load_data()
-    training_inputs = np.array([[np.reshape(x, (28, 28))] for x in tr_d[0]])
+    training_inputs = np.array([np.reshape(x, (784)) for x in tr_d[0]])
     training_results = np.array([vectorized_result(y) for y in tr_d[1]])
-    training_data = [training_inputs, [], training_results]
+    training_data = [training_inputs, training_results]
 
-    validation_inputs = np.array([[np.reshape(x, (28, 28))] for x in va_d[0]])
+    validation_inputs = np.array([np.reshape(x, (784)) for x in va_d[0]])
     validation_results = np.array([vectorized_result(y) for y in va_d[1]])
-    validation_data = [validation_inputs, [], validation_results]
+    validation_data = [validation_inputs, validation_results]
 
-    test_inputs = np.array([[np.reshape(x, (28, 28))] for x in te_d[0]])
+    test_inputs = np.array([np.reshape(x, (784)) for x in te_d[0]])
     test_results = np.array([vectorized_result(y) for y in te_d[1]])
-    test_data = [test_inputs, [], test_results]
+    test_data = [test_inputs, test_results]
 
     return (training_data, validation_data, test_data)
 
@@ -88,6 +88,23 @@ def vectorized_result(j):
     position and zeroes elsewhere.  This is used to convert a digit
     (0...9) into a corresponding desired output from the neural
     network."""
-    e = np.zeros((10, 1))
+    e = np.zeros((10))
     e[j] = 1.0
     return e
+
+def load_data_wrapper2D():
+
+    tr_d, va_d, te_d = load_data()
+    training_inputs = np.array([[np.reshape(x, (28, 28))] for x in tr_d[0]])
+    training_results = np.array([vectorized_result(y) for y in tr_d[1]])
+    training_data = [training_inputs, training_results]
+
+    validation_inputs = np.array([[np.reshape(x, (28, 28))] for x in va_d[0]])
+    validation_results = np.array([vectorized_result(y) for y in va_d[1]])
+    validation_data = [validation_inputs, validation_results]
+
+    test_inputs = np.array([[np.reshape(x, (28, 28))] for x in te_d[0]])
+    test_results = np.array([vectorized_result(y) for y in te_d[1]])
+    test_data = [test_inputs, test_results]
+
+    return (training_data, validation_data, test_data)

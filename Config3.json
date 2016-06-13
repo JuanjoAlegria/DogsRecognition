@@ -1,0 +1,24 @@
+{
+	"trainingType": "mpi",
+	"networkType": "ConvAndFFNet",
+	"feedForwardRep": ["Hidden-100", "Output-10"],
+	"channelsRep":
+	[
+		["Conv-20-5", "Pool-Max-2"]
+	],
+	"inputSizeChannels": [28,28],
+	"activationString": "Sigmoid",
+	"costString": "LogLikelihood",
+	"outputActivationString":"Softmax",
+	"regularizationString": "NullReg",
+
+	"miniBatchSize": 10,
+	"eta": 0.1,
+	"learningScheduleString": "SimpleEta",
+
+	"stopCriteria": "maxEpochs",
+	"maxEpochs": 60,
+
+	"epochSave": 2,
+	"networkLoadDir": ""
+}
